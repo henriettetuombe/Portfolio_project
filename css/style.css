@@ -1,0 +1,175 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Define a common background color and font for the body */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #353535;
+    color: #333;
+  }
+  
+  /* Style the header/navigation */
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 20px;
+    font-size: 18px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ff9f1a; /* Hover color */
+  }
+  
+  /* Style the sections */
+  section {
+    padding: 40px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Style the 'About' section */
+  #about {
+    text-align: center;
+  }
+  
+  .pic img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Style the 'Skills' section */
+  #skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  #skills ul li {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #ff9f1a; /* Skill background color */
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Style the 'Experience' section */
+  #experience ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Display entries as a flex container */
+    flex-wrap: wrap; /* Allow entries to wrap to the next row */
+    justify-content: space-between; /* Space them evenly between rows */
+  }
+  
+  #experience ul li {
+    width: calc(33.33% - 20px); /* Adjust the width as needed (3 columns) */
+    margin-bottom: 30px;
+    background-color: #c4c4c4; /* Darker background color */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Style the 'Projects' section */
+  #projects .project {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  #projects h3 {
+    color: #333;
+    font-size: 20px;
+  }
+  
+  /* Style the 'Contact' section */
+  #contact {
+    text-align: center;
+  }
+  
+  /* Add media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    nav ul {
+      text-align: center;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .me .pic img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  /* Add media queries for responsiveness on smaller screens */
+@media screen and (max-width: 768px) {
+    /* For smaller screens, stack skills and experiences vertically */
+  
+    /* Skills */
+    #skills ul {
+      flex-direction: column;
+    }
+  
+    #skills ul li {
+      margin: 10px 0;
+      padding: 10px 20px;
+      text-align: center;
+    }
+  
+    /* Experience */
+    #experience ul {
+      flex-direction: column;
+    }
+  
+    #experience ul li {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the regular navigation */
+    }
+
+    .mobile-nav {
+        display: block; /* Show the mobile navigation button */
+    }
+
+    .show {
+        display: block; /* Show the navigation when the button is clicked */
+    }
+}
