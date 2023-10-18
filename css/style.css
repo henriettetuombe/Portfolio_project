@@ -1,175 +1,192 @@
-/* Reset some default styles */
-* {
+/* General Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-image: url("/images/sky.jpg");
+    background-position: center;
+    background-size: contain;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
+    height: 100%;
+}
+
+/* First Horizontal Layout Styles */
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: -40px;
+    height: 80px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
   }
-  
-  /* Define a common background color and font for the body */
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #353535;
-    color: #333;
-  }
-  
-  /* Style the header/navigation */
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 20px;
-    font-size: 18px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #ff9f1a; /* Hover color */
-  }
-  
-  /* Style the sections */
-  section {
-    padding: 40px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1, h2, h3 {
-    color: #333;
-    margin: 10px 0;
-  }
-  
-  /* Style the 'About' section */
-  #about {
-    text-align: center;
-  }
-  
-  .pic img {
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-  /* Style the 'Skills' section */
-  #skills ul {
+
+.my-img {
+    width: 40%;
+    margin-left: 40%;
+    margin-top: 10% ;
+    border-radius: 50% ;
+}
+
+#my-img {
+    margin-top: -40px;
+}
+
+.greetings {
+    color: white;
+    position: absolute;
+    top: 250px;
+    margin-left: 100px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: -40px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.navigation ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    padding: 0;
-  }
-  
-  #skills ul li {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #ff9f1a; /* Skill background color */
-    color: #fff;
-    border-radius: 5px;
-  }
-  
-  /* Style the 'Experience' section */
-  #experience ul {
-    list-style: none;
-    padding: 0;
-    display: flex; /* Display entries as a flex container */
-    flex-wrap: wrap; /* Allow entries to wrap to the next row */
-    justify-content: space-between; /* Space them evenly between rows */
-  }
-  
-  #experience ul li {
-    width: calc(33.33% - 20px); /* Adjust the width as needed (3 columns) */
-    margin-bottom: 30px;
-    background-color: #c4c4c4; /* Darker background color */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  
-  /* Style the 'Projects' section */
-  #projects .project {
-    margin: 20px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-  }
-  
-  #projects h3 {
-    color: #333;
-    font-size: 20px;
-  }
-  
-  /* Style the 'Contact' section */
-  #contact {
-    text-align: center;
-  }
-  
-  /* Add media queries for responsiveness */
-  @media screen and (max-width: 768px) {
-    nav ul {
-      text-align: center;
-    }
-  
-    nav ul li {
-      display: block;
-      margin: 10px 0;
-    }
-  
-    .me .pic img {
-      width: 100%;
-      height: auto;
-    }
-  }
-  /* Add media queries for responsiveness on smaller screens */
-@media screen and (max-width: 768px) {
-    /* For smaller screens, stack skills and experiences vertically */
-  
-    /* Skills */
-    #skills ul {
-      flex-direction: column;
-    }
-  
-    #skills ul li {
-      margin: 10px 0;
-      padding: 10px 20px;
-      text-align: center;
-    }
-  
-    /* Experience */
-    #experience ul {
-      flex-direction: column;
-    }
-  
-    #experience ul li {
-      margin-bottom: 30px;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide the regular navigation */
-    }
-
-    .mobile-nav {
-        display: block; /* Show the mobile navigation button */
-    }
-
-    .show {
-        display: block; /* Show the navigation when the button is clicked */
-    }
+    font-weight: bold;
 }
+
+.navigation li {
+    margin-right: 100px;
+    font-size: large;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Second Horizontal Layout (Images with Text) Styles */
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url("/images/section-image.png");
+    margin-top: 690px;
+    max-height: 500vh; /* Set a maximum height that fits within the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds the container height */
+  }
+  
+  .skills,
+  .experience,
+  .education,
+  .projects {
+    text-align: center;
+    margin: 20px;
+    flex: 0 0 calc(50% - 40px); /* Each section takes 50% of the width with some margin */
+  }
+  
+  .skills,
+  .education {
+    position: relative;
+    z-index: 2; 
+  }
+  
+  .skills img,
+  .education img {
+    width: 150px;
+  }
+  
+  .skills p,
+  .experience p,
+  .education p,
+  .projects p {
+    margin-top: 10px;
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'Young Serif', serif;
+    
+  }
+
+  .skills img, .projects img{
+    width: 500px;
+    height: 500px;
+    border: 5px solid white;
+    border-radius: 50px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .experience img, .education img {
+    width: 500px;
+    height: 500px;
+    border: 5px solid #FE4444;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+ 
+  .text-box {
+    background-color: white;
+  }
+
+  .text-name {
+    border: 5px solid white;
+    background-color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 200px;
+  }
+
+/* Third Horizontal Layout (Footer) Styles */
+footer {
+    background-color: orangered; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .social-icons {
+    height: 40px;
+    margin-right: 10px;
+    background-color: skyblue;
+    border-radius: 45%;
+  }
+  
+ .github-icon {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+ }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .text-box {
+    display: none;
+  }
